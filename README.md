@@ -10,22 +10,24 @@ When switching between the menu bar item, this animation will start: the slider 
 3. in code aspect,use it just like tableview/collection view, set menubar's datasource and delegate
 
 ```swift
-@IBOutlet menuBar:USMenuBar!
-override func viewDidLoad(){
-  super.viewDidLoad()
-  menuBar.dataSource = self
-  menuBar.delegate = self
-}
-private let menuTitle = ["item1", "item2"]
-func numberOfItemInMenuBar(menuBar: USMenuBar) -> Int {
-	return menuTitle.count
-}
+class ViewController:UIViewController, USMenuBarDelegate, USMenuBarDataSource{
+  @IBOutlet menuBar:USMenuBar!
+  override func viewDidLoad(){
+    super.viewDidLoad()
+    menuBar.dataSource = self
+    menuBar.delegate = self
+  }
+  private let menuTitle = ["item1", "item2"]
+  func numberOfItemInMenuBar(menuBar: USMenuBar) -> Int {
+    return menuTitle.count
+  }
 	
-func uSMenuBar(menuBar: USMenuBar, titleForItemAtIndex index: Int) -> String {
-	return menuTitle[index]
-}
+  func uSMenuBar(menuBar: USMenuBar, titleForItemAtIndex index: Int) -> String {
+    return menuTitle[index]
+  }
 	
-func uSMenuBar(menuBar: USMenuBar, didSelectRowAtIndex index: Int) {
-	<#code#>
+  func uSMenuBar(menuBar: USMenuBar, didSelectRowAtIndex index: Int) {
+    <#code#>
+  }
 }
 ```
