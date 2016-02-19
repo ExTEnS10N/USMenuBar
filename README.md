@@ -1,7 +1,7 @@
 # USMenuBar
 ### Introduction
 ios menubar with slide effect  
-![Preview](https://raw.githubusercontent.com/ExTEnS10N/The-Month/master/preview.png)  
+![Preview](https://raw.githubusercontent.com/ExTEnS10N/USMenuBar/master/preview.png)  
 When switching between the menu bar item, this animation will start: the slider which is at the bottom of menu bar will move to target item, and length of the slider will change animated to fit the target item.
 
 ### Usage  
